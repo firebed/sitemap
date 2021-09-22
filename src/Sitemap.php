@@ -13,7 +13,7 @@ class Sitemap implements Responsable, Renderable
 {
     public array $urls = [];
 
-    public function addUrl(Url|string $url, Carbon|string $lastmod = NULL, string $changefreq = NULL, string $priority = NULL): static
+    public function addUrl(Url|string $url, Carbon|string $lastmod = NULL, string $changefreq = NULL, float $priority = 0.8): static
     {
         if ($url instanceof Url) {
             $this->urls[] = $url;
